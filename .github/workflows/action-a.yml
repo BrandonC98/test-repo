@@ -1,0 +1,15 @@
+name: "Test action A"
+on:
+  push:
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Tesing A
+        id: actionb
+        uses: ./.github/actions/common.yml
