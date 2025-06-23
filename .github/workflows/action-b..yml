@@ -3,13 +3,5 @@ on:
   push:
 
 jobs:
-
   test:
-    runs-on: ubuntu-latest
-    continue-on-error: true
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Tesing B
-        id: actionb
-        uses: ./.github/actions/common.yml
+    uses: ./.github/actions/common.yml
