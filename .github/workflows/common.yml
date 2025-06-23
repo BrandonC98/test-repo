@@ -4,12 +4,12 @@ on:
 
 jobs:
   common-action1:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout main
       uses: actions/checkout@v3
   common-action2:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     needs: [common-action1]
     concurrency:
       group: test-group
