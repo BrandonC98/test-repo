@@ -1,6 +1,7 @@
 name: "Test action B"
 on:
   push:
+  workflow_dispatch:
 
 jobs:
   test:

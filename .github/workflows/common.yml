@@ -1,12 +1,12 @@
 on:
   workflow_call:
+  workflow_dispatch:
 
 jobs:
   common-action1:
     runs-on: ubuntu:latest
     steps:
     - name: Checkout main
-      id: checkout_release
       uses: actions/checkout@v3
   common-action2:
     runs-on: ubuntu:latest
@@ -15,7 +15,6 @@ jobs:
       group: test-group
     steps:
     - name: sleeping
-      id: sleeping_id
       shell: bash
       run: |
         echo "Hello World"
